@@ -1,0 +1,20 @@
+<template name="commentItemTpl">
+  <!--用户信息-->
+  <view class="comment-item">
+    <view class="comment-item-header">
+      <view class="left-img">
+        <image src="{{avatar_img}}"></image>
+      </view>
+      <view class="right-user">
+        <text class="user-name">{{avatar}}</text>
+      </view>
+    </view>
+    <!--评论详情-->
+      <!--评论-->
+      <view class="comment-txt">
+        <text>{{content_txt}}</text>
+      </view>
+      <!--时间-->
+      <view class="comment-time">{{create_time}}</view>
+    </view>
+</template>

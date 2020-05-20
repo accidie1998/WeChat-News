@@ -1,0 +1,83 @@
+/* pages/homepage/homepage.wxss */
+@import "recommend/recommend.tpl.wxss";
+@import "video/video.tpl.wxss";
+swiper{
+  width: 100%;
+  height: 400rpx;
+}
+swiper image{
+  width: 100%;
+  height: 400rpx;
+}
+
+
+
+.homepage-detail-box {
+  top: 0;
+  left: 10rpx;
+  bottom: 0;
+  right: 0;
+}
+
+.homepage-main-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 94%; /*给详细文章留白*/
+  right: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #fefefe;
+  z-index: 101; /*在z轴取值101，在所有元素上方*/
+  box-shadow: 0 0.5px 0 0 #ececec;
+  border-bottom: 2rpx solid #ccc; /*分割虚线边框*/
+}
+
+/*两个导向标题*/
+.tool {
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  margin: 2rpx 2rpx 2rpx 2rpx;
+}
+
+.tool-item {
+  display: inline-block; /*多个元素共占一行*/
+  vertical-align: top;
+  margin-right: 100rpx;
+  margin-left: 100rpx;
+  justify-content: space-evenly;
+}
+
+.tool-item .color1 {
+  color: #2e3f9c;
+  border-bottom: solid 3px #2e3f9c;
+}
+
+.tool-item .color2 {
+  color: #ccc;
+}
+
+
+.select-box {
+  position: absolute; /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。*/
+  bottom: 0; /*贴紧下方*/
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #d5d5d5; /*顶部分界线*/
+  min-height: 100rpx; /*最大高度*/
+  z-index: 1000; /*在z轴取值1000，在所有元素上方*/
+}
+
+/* 列表设置 */
+
+.detail-box {
+  position: absolute; /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。*/
+  top: 6%;
+  left: 0;
+  right: 0;
+  z-index: 100; /*在z轴取值100，在top元素下方*/
+
+}
+

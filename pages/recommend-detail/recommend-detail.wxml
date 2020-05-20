@@ -1,0 +1,66 @@
+<!--pages/recommend-detail/recommend-detail.wxml-->
+<import src="details.item/details.item.tpl" />
+<import src="comment.item/comment.item.tpl" />
+
+
+<view class="remmcond-box">
+  <view class="article-detail-box">
+    <!--文章标题-->
+    <view class="article-detail-title">
+      <text>{{recommend.title}}</text>
+    </view>
+    <!--作者信息-->
+    <view class="article-writer-box">
+      <view class="article-writer-main">
+        <image src="{{recommend.writer_img}}"></image>
+        <text>{{recommend.writer}}</text>
+      </view>
+      <view class="article-writer-follow" catchtap="onFollowTap">
+        <image wx:if="{{recommend.followStatus}}" src="/images/icon/followed.png"></image>
+        <image wx:else src="/images/icon/follow.png"></image>
+      </view>
+    </view>
+    <!--文章详情-->
+    <view>
+      <block wx:for="{{recommend.details}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+        <template is="detailsItemTpl" data="{{...item}}"></template>
+      </block>
+    </view>
+    <view class="comment-tool-box">
+      <view class="comment-tool-main" catchtap="onUpTap">
+        <image wx:if="{{recommend.upStatus}}" src="/images/icon/wx_app_liked.png"></image>
+        <image wx:else src="/images/icon/wx_app_like.png"></image>
+        <text>{{recommend.upNum}}</text>
+      </view>
+      <view class="comment-tool-main" catchtap="onCollectTap">
+        <image wx:if="{{recommend.collectionStatus}}" src="/images/icon/wx_app_collected.png"></image>
+        <image wx:else src="/images/icon/wx_app_collect.png"></image>
+        <text>{{recommend.collectionNum}}</text>
+      </view>
+    </view>
+    <view class="comment-title">-热门评论-</view>
+    <!--评论区-->
+    <view wx:if="{{comments.length!=0}}">
+      <block wx:for="{{comments}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+        <template is="commentItemTpl" data="{{...item}}"></template>
+      </block>
+      <text style="margin-left:220rpx;">●●已加载全部评论●●</text>
+    </view>
+    <view wx:else>
+      <view class="comments-nocomments">
+        <image src="/images/icon/暂无评论.png"></image>
+        <text>暂无评论</text>
+      </view>
+    </view>
+  </view>
+
+  <!--评框-->
+  <view class="comment-input-box">
+    <view class="send-msg-box">
+      <view class="input-item">
+        <input class="input keyboard-input" placeholder="期待你的神评论..." value="{{keyboardInputValue}}" bindinput="bindCommentInput" bindconfirm="submitComment"></input>
+      </view>
+      <view class="submit-btn" catchtap="submitComment">发送</view>
+    </view>
+  </view>
+</view>

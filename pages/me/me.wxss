@@ -1,0 +1,77 @@
+/* pages/me/me.wxss */
+
+.container {
+  width: 100%;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.personal-details-box {
+  width: 100%;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  border-bottom: 1px solid #cecece;
+}
+
+.personal-details-box image {
+  /*头像设置*/
+  height: 150rpx;
+  width: 150rpx;
+  margin-right: 20rpx; /*头像与用户名之间的间隔*/
+}
+
+.details-main-box {
+  float: right;
+  width: 500rpx;
+  margin-top: 50rpx;
+}
+
+.details-main-box text {
+  line-height: 50rpx;
+  font-size: 50rpx;
+  color: #484564;
+}
+
+/************************************/
+
+.personal-msg-box {
+  width: 100%;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.msg-main-box {
+  width: 100%;
+  padding: 10rpx 10rpx;
+  box-sizing: border-box;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  border-bottom: 1px solid #cecece;
+}
+
+.msg-main-box image {
+  /*头像设置*/
+  height: 100rpx;
+  width: 100rpx;
+  margin-right: 20rpx; /*头像与用户名之间的间隔*/
+}
+
+.msg-text-box {
+  float: right;
+  width: 510rpx;
+  margin-top: 30rpx;
+  line-height: 50rpx;
+}
+
+.msg-text-box .wenzi {
+  font-size: 35rpx;
+  color: #484564;
+}
+
+.msg-text-box .tubiao {
+  margin-left: 296rpx;
+  font-size: 50rpx;
+  color: #484564;
+}

@@ -1,0 +1,15 @@
+<template name="recommendTpl">
+  <!--列表-->
+    <view class='recommend-item'>
+      <view class='recommend-item-content one-px-border'>
+        <view class='recommend-item-left'>
+          <image src='{{message_img}}'></image>
+        </view>
+        <view class='recommend-item-right'>
+          <view class='recommend-title'>{{title}}</view>
+          <view class='recommend-writer'>{{writer}}</view>
+          <view class='recommend-Time'>{{time}}</view>
+        </view>
+      </view>
+    </view>
+</template>

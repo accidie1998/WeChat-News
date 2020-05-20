@@ -1,0 +1,46 @@
+/* pages/me/me-guanzhu/me-guanzhu.wxss */
+.guanzhu-writer{
+ position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+right: 0;
+overflow-y: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+.guanzhu-writer .article-writer-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.article-writer-box .article-writer-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.article-writer-main image {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.article-writer-main text {
+  font-weight: 300;
+  margin-left: 30rpx;
+  color: #666;
+}
+
+.article-writer-box .article-writer-follow {
+  margin-right: 48rpx;
+}
+
+.article-writer-follow image {
+  height: 60rpx;
+  width: 150rpx;
+}

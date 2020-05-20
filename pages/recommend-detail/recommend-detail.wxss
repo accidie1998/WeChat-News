@@ -1,0 +1,186 @@
+/* pages/recommend-detail/recommend-detail.wxss */
+@import "details.item/details.item.tpl.wxss";
+@import "comment.item/comment.item.tpl.wxss";
+
+.remmcond-box {
+  /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。*/
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: hidden;
+  /*overflow-y属性指定如果它溢出了元素的内容区是否剪辑顶部/底部边缘内容
+  裁剪内容 - 不提供滚动机制。*/
+}
+
+/****************文章信息***********************************************/
+
+.article-detail-box {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 100rpx; /*给评论框留白*/
+  right: 0;
+  overflow-y: auto;
+  /*auto如果溢出框，则应该提供滚动机制。*/
+  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling 属性控制元素在移动设备上是否使用滚动回弹效果.
+auto: 使用普通滚动, 当手指从触摸屏上移开，滚动会立即停止。
+touch: 使用具有回弹效果的滚动, 当手指从触摸屏上移开，内容会继续保持一段时间的滚动效果。继续滚动的速度和持续的时间和滚动手势的强烈程度成正比。同时也会创建一个新的堆栈上下文。*/
+}
+
+.article-detail-box .article-detail-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-detail-title text {
+  font-size: 20px;
+  margin: 30rpx;
+  letter-spacing: 2px; /*定义字符间的固定空间（允许使用负值）*/
+  text-align: center;
+  text-shadow: 2px 2px 2px #777; /*字体阴影效果*/
+  color: #4b556c;
+}
+
+.article-detail-box .article-writer-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.article-writer-box .article-writer-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.article-writer-main image {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.article-writer-main text {
+  font-weight: 300;
+  margin-left: 30rpx;
+  color: #666;
+}
+
+.article-writer-box .article-writer-follow {
+  margin-right: 48rpx;
+}
+
+.article-writer-follow image {
+  height: 60rpx;
+  width: 150rpx;
+}
+
+/*****************评论区****************/
+
+.comment-tool-box {
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center; /*居中*/
+  margin: 20rpx 28rpx 20rpx 0;
+  z-index: 1;
+}
+
+.comment-tool-main {
+  display: inline-block; /*多个元素共占一行*/
+  vertical-align: top;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  color: #919191;
+}
+
+.comment-tool-main image {
+  height: 40rpx;
+  width: 40rpx;
+  vertical-align: -3px;
+  margin-left: 24rpx;
+  margin-right: rpx;
+}
+
+.comment-title {
+  text-align: center;
+  height: 30rpx;
+  line-height: 10rpx;
+  font-size: 40rpx;
+  color: #212121;
+  border-bottom: 1px solid #ccc; /*顶部实线边框*/
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  padding: 8rpx 0;
+  font-family: Microsoft YaHei;
+}
+
+/*********评论信息*******/
+
+.comments-nocomments {
+  text-align: center;
+  margin: 25%;
+}
+
+.comments-nocomments image {
+  width: 500rpx;
+  height: 300rpx;
+}
+
+/**************评论框样式******************/
+
+.comment-input-box {
+  position: absolute; /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。*/
+  bottom: 0; /*贴紧下方*/
+  left: 0;
+  right: 0;
+  background-color: #eae8e8;
+  border-top: 1rpx solid #d5d5d5; /*顶部分界线*/
+  min-height: 100rpx; /*最大高度*/
+  z-index: 1000; /*在z轴取值1000，在所有元素上方*/
+}
+
+.comment-input-box .send-msg-box {
+  margin: 10rpx 10rpx 10rpx 10rpx;/*设置边距（上外边距 ，右外边距，下外边距，左外边距）*/
+  display: flex;
+}
+.comment-input-box .input-item {
+  width: 600rpx;
+}
+
+.comment-input-box .input-item .input {
+  border: 1rpx solid #d5d5d5;
+  background-color: #fff;
+  border-radius: 3px;
+  line-height: 65rpx;
+  margin: 5rpx 0 5rpx 10rpx; /*设置输入组件的外边框*/
+  font-size: 24rpx;
+  color: #838383;
+  padding: 0 2%;
+}
+.comment-input-box .input-item .keyboard-input {
+  width: auto;
+  max-height: 500rpx;
+  height: 65rpx;
+  word-break: break-all; /*单词拼写玩换行，还是直接换行，这里是直接换行*/
+  overflow: auto; /*如果内容态度显示不出来以什么形式处理溢出，这里交给扩容处理*/
+}
+
+.submit-btn {
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  margin-left: 15rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #4a6141;
+  border-radius: 5rpx;
+  color: #fff;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}

@@ -1,0 +1,63 @@
+<!--pages/homepage/homepage.wxml-->
+<import src="recommend/recommend.tpl" />
+<import src="video/video.tpl" />
+
+<view class="homepage-detail-box">
+  <view class="homepage-main-box">
+    <view class='tool'>
+      <view class="tool-item" catchtap="onRecommendTap">
+        <view wx:if="{{controlRecommendFlag}}" class='color1'>
+          <text>推荐</text>
+        </view>
+        <view wx:else="{{controlRecommendFlag}}" class='color2'>
+          <text>推荐</text>
+        </view>
+      </view>
+      <view class="tool-item" catchtap="onVideoTap">
+        <view wx:if="{{controlVideoFlag}}" class='color1'>
+          <text>视频</text>
+        </view>
+        <view wx:else="{{controlVideoFlag}}" class='color2'>
+          <text>视频</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="detail-box">
+    <block wx:if="{{controlRecommendFlag}}">
+      <view>
+        <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true">
+          <block wx:for="{{recommendList}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+            <view data-recommend-id="{{item.recommendId}}" catchtap="onTapToDetail">
+              <swiper-item>
+                <image src="{{item.message_img}}" />
+              </swiper-item>
+            </view>
+          </block>
+        </swiper>
+      </view>
+      <block wx:for="{{recommendList}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+        <view data-recommend-id="{{item.recommendId}}" catchtap="onTapToDetail">
+          <template is="recommendTpl" data="{{...item}}" />
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{controlVideoFlag}}" wx:for="{{videoList}}">
+      <view class='video-item'>
+        <view class='wrapper'>
+          <!-- autoplay="{{true}}"，不自动轮播show-center-play-btn是微信小程序video组件控制是否显示视频中间的播放按钮的属性 -->
+          <video class='video-video' wx:if='{{index==videoIndex}}' autoplay='{{true}}' show-center-play-btn="{{false}}" src='{{item.vedio_add}}'></video>
+          <image class='video-video2' wx:if='{{index!=videoIndex}}' mode='aspectFill' src='{{item.vedioimg}}'></image>
+          <image class='videoPlay' wx:if='{{index!=videoIndex}}' data-index='{{index}}' catchtap='onVideoPlayTap' src='/images/icon/play.png'></image>
+        </view>
+        <view class="video-writer-img">
+          <image src="{{item.writer_img}}"></image>
+          <text>{{item.writer_txt}}</text>
+        </view>
+        <view class='video-name'>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

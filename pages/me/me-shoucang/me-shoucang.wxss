@@ -1,0 +1,62 @@
+/* pages/me/me-shoucang/me-shoucang.wxss */
+
+.shoucang-article {
+  /*元素边框格式*/
+  margin: 20rpx 24rpx 20rpx 24rpx; /*设置边距（上外边距是 20rpx，右外边距是 24rpx，下外边距是 20rpx，左外边距是 24rpx）*/
+  padding: 0 0 0 0; /*设置顶部高度（依次是上，右，下，左）*/
+  border-bottom: 1rpx dashed #ccc; /*虚线边框*/
+}
+
+.article-box {
+  margin: 15rpx 30rpx;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.article-title-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.article-title-text {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  width: 80%;
+}
+
+.article-title-text text {
+  font-size: 20px;
+  margin: 30rpx;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 2px#777;
+  color: #4b556c;
+  display: -webkit-box;
+  /* 只允许显示两行多的用... */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-collect {
+  font-weight: 300;
+  margin-left: 30rpx;
+}
+
+.article-collect image {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.article-img {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #666;
+  padding: 10rpx 0;
+}
+
+.article-img image {
+  height: 300rpx;
+  width: 100%;
+}

@@ -1,0 +1,68 @@
+
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  width: 690rpx;
+  margin: auto;
+  padding: 40rpx 0;
+  border-bottom: solid 1px #efefef;
+}
+
+.wrapper {
+  width: 690rpx;
+  height: 400rpx;
+  position: relative;
+}
+
+.video-video {
+  width: 690rpx;
+  height: 400rpx;
+}
+
+.video-video2 {
+  width: 690rpx;
+  height: 400rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.videoPlay {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  top: 50%;
+  left: 50%;
+  margin: -30rpx 0 0 -30rpx;
+  z-index: 100;
+}
+
+.video-name {
+  margin-top: 10rpx;
+}
+
+.video-name text {
+  font-family: PingFangSC-Medium;
+  font-size: 40rpx;
+  color: #333;
+    /* 只允许显示两行多的用... */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video-writer-img {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  height: 100rpx;
+  float: right;
+}
+.video-writer-img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.video-writer-img text{
+  margin-left: 30rpx;
+}

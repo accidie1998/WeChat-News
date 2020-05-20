@@ -1,0 +1,14 @@
+<template name="detailsItemTpl">
+  <view wx:if="{{detail}}">
+    <view class="item-box">
+      <view class="item-detail">
+        <text>{{detail}}</text>
+      </view>
+    </view>
+    <view wx:if="{{detail_img}}">
+      <view class="item-detail_img">
+        <image src="{{detail_img}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/me/me",
+    "pages/recommend-detail/recommend-detail",
+    "pages/me/me-guanzhu/me-guanzhu",
+    "pages/me/me-shoucang/me-shoucang"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "平顶山新闻",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1AAD16",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "/images/icon/homepage1.png",
+        "selectedIconPath": "/images/icon/homepage2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "/images/icon/me1.png",
+        "selectedIconPath": "/images/icon/me2.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

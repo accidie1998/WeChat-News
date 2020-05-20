@@ -1,0 +1,18 @@
+<!--pages/me/me-guanzhu/me-guanzhu.wxml-->
+<view class="guanzhu-writer">
+  <!--作者信息-->
+  <block wx:for="{{recommendList}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+    <view wx:if="{{item.followStatus}}">
+      <view class="article-writer-box">
+        <view class="article-writer-main">
+          <image src="{{item.writer_img}}"></image>
+          <text>{{item.writer}}</text>
+        </view>
+        <view class="article-writer-follow" catchtap="onFollowTap" data-recommend-id="{{item.recommendId}}">
+          <image wx:if="{{item.followStatus}}" src="/images/icon/followed.png"></image>
+          <image wx:else src="/images/icon/follow.png"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="personal-details-box">
+
+    <image src="/images/avatar/me.png"></image>
+    <view class="details-main-box">
+      <text>L.J.H.98</text>
+    </view>
+  </view>
+  <view class="personal-msg-box">
+    <view class="msg-main-box" catchtap="onGuanzhuTap">
+      <image src="/images/icon/guanzhu.png"></image>
+      <view class="msg-text-box">
+      <text class="wenzi">关注的作者</text>
+      <text class="tubiao">></text>
+      </view>
+    </view>
+    <view class="msg-main-box" catchtap="onShoucangTap">
+      <image src="/images/icon/shoucang.png"></image>
+      <view class="msg-text-box">
+      <text class="wenzi">收藏的文章</text>
+      <text class="tubiao">></text>
+      </view>
+    </view>
+  </view>
+</view>

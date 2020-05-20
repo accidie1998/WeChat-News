@@ -1,0 +1,25 @@
+<!--pages/me/me-shoucang/me-shoucang.wxml-->
+<view>
+  <!--作者信息-->
+  <block wx:for="{{recommendList}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+  <view data-recommend-id="{{item.recommendId}}" catchtap="onTapToDetail"> 
+    <view wx:if="{{item.collectionStatus}}">
+      <view class="shoucang-article">
+        <view class="article-box">
+          <view class="article-title-box">
+            <view class="article-title-text">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="article-collect" catchtap="onCollectTap" data-recommend-id="{{item.recommendId}}">
+              <image src="/images/icon/shanchu.png"></image>
+            </view>
+          </view>
+          <view class="article-img">
+            <image src="{{item.message_img}}"></image>
+          </view>
+        </view>
+      </view>
+      </view>
+    </view>
+  </block>
+</view>

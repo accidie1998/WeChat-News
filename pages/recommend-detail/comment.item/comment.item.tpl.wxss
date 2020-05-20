@@ -1,0 +1,95 @@
+.comment-title {
+  text-align: center;
+  height: 30rpx;
+  line-height: 10rpx;
+  font-size: 40rpx;
+  color: #212121;
+  border-bottom: 1px solid #ccc; /*顶部实线边框*/
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  padding: 8rpx 0;
+  font-family: Microsoft YaHei;
+}
+
+.comment-item {
+  /*元素边框格式*/
+  margin: 20rpx 24rpx 20rpx 24rpx; /*设置边距（上外边距是 20rpx，右外边距是 24rpx，下外边距是 20rpx，左外边距是 24rpx）*/
+  padding: 0 0 0 0; /*设置顶部高度（依次是上，右，下，左）*/
+  border-bottom: 1rpx dashed #ccc; /*评论虚线边框*/
+}
+
+.comment-item:last-child {
+  /*指定最后一个元素没有边框*/
+  border-bottom: none;
+}
+
+.comment-item-header .left-img image {
+  /*头像设置*/
+  height: 80rpx;
+  width: 80rpx;
+  margin-right: 20rpx; /*头像与用户名之间的间隔*/
+}
+
+.comment-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment-body {
+  /*评论区*/
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #666;
+  padding: 10rpx 0;
+}
+
+.comment-txt text {
+  line-height: 50rpx; /*行间距*/
+}
+
+.comment-img {
+  /*评论区图片*/
+  margin: 10rpx 0; /*评论区图片与文章距离高度*/
+}
+
+.comment-img image {
+  /*评论图片格式*/
+  max-width: 32%;
+  margin-right: 10rpx; /*评论图片间间隔*/
+  height: 220rpx;
+  width: 220rpx;
+}
+
+.comment-voice-item {
+  /*语音边框格式*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200rpx;
+  height: 64rpx;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 6rpx;
+}
+
+.comment-voice-item .voice-play {
+  /*语音播放图标*/
+  height: 64rpx;
+  width: 64rpx;
+}
+
+.comment-voice-item text {
+  /*语音时长显示格式*/
+  margin-left: 60rpx;
+  color: #212121;
+  font-size: 22rpx;
+}
+
+.comment-time {
+  /*时间格式*/
+  text-align: right;
+  margin-top: 10rpx;
+  color: #ccc;
+  font-size: 24rpx;
+}
